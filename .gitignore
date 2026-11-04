@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.so
+*.so.*
+lib/
+fakecuda/tests/test_procaddress

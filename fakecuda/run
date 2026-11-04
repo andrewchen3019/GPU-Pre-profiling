@@ -1,0 +1,5 @@
+#!/bin/sh
+here=$(cd "$(dirname "$0")" && pwd)
+export LD_PRELOAD="$here/libfakecuda.so${LD_PRELOAD:+:$LD_PRELOAD}"
+export LD_LIBRARY_PATH="$here/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+exec "$@"
