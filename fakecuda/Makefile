@@ -5,7 +5,7 @@ SRCS = device.c runtime.c driver.c nvml.c memory.c launch.c stream.c stubs.c run
 
 all: libfakecuda.so lib/libnvidia-ml.so.1
 
-libfakecuda.so: $(SRCS) fakecuda.h libcudart.map
+libfakecuda.so: $(SRCS) fakecuda.h integrity.h libcudart.map
 	gcc -O2 -Wall -shared -fPIC $(CUDA_INC) -Wl,--version-script=libcudart.map,-soname,libcuda.so.1 -o $@ $(SRCS) -lpthread -ldl
 
 runtime_stubs.c: tools/gen_runtime_stubs.sh

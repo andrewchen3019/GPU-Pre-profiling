@@ -4,3 +4,6 @@ __pycache__/
 *.so.*
 lib/
 fakecuda/tests/test_procaddress
+
+# Local project context distilled from chats (not for commit)
+PROJECT_CONTEXT.md
